@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import ScrollProgress from "@/components/ScrollProgress";
 import MeshBackground from "@/components/MeshBackground";
 import MaintenancePage from "@/components/MaintenancePage";
+import { Analytics } from "@vercel/analytics/next";
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -50,6 +51,7 @@ export default function RootLayout({ children }) {
             <Footer />
           </>
         )}
+        <Analytics />
       </body>
     </html>
   );
