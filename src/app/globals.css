@@ -275,6 +275,39 @@ body {
 }
 
 /* ========================================
+   ANKARA / WAX PRINT INSPIRED PATTERNS
+   Subtle geometric motifs for decorative accents
+   ======================================== */
+
+/* Concentric circles — classic Ankara bullseye motif */
+.ankara-circles {
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='36' fill='none' stroke='%23E91E63' stroke-width='0.6' opacity='0.35'/%3E%3Ccircle cx='40' cy='40' r='28' fill='none' stroke='%235C1132' stroke-width='0.5' opacity='0.25'/%3E%3Ccircle cx='40' cy='40' r='20' fill='none' stroke='%23E91E63' stroke-width='0.6' opacity='0.3'/%3E%3Ccircle cx='40' cy='40' r='12' fill='none' stroke='%235C1132' stroke-width='0.5' opacity='0.2'/%3E%3Ccircle cx='40' cy='40' r='5' fill='%23E91E63' opacity='0.12'/%3E%3C/svg%3E");
+  background-size: 80px 80px;
+}
+
+/* Fan / shell pattern — Kitenge-inspired arcs */
+.ankara-fans {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 60 A60 60 0 0 1 60 0' fill='none' stroke='%23E91E63' stroke-width='0.5' opacity='0.2'/%3E%3Cpath d='M0 60 A45 45 0 0 1 45 0' fill='none' stroke='%235C1132' stroke-width='0.4' opacity='0.15'/%3E%3Cpath d='M0 60 A30 30 0 0 1 30 0' fill='none' stroke='%23FF4081' stroke-width='0.5' opacity='0.18'/%3E%3Cpath d='M0 60 A15 15 0 0 1 15 0' fill='none' stroke='%23E91E63' stroke-width='0.4' opacity='0.12'/%3E%3C/svg%3E");
+  background-size: 60px 60px;
+}
+
+/* Geometric diamond lattice — bold Ankara geometric */
+.ankara-diamonds {
+  background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24 4L44 24L24 44L4 24Z' fill='none' stroke='%23E91E63' stroke-width='0.5' opacity='0.2'/%3E%3Cpath d='M24 12L36 24L24 36L12 24Z' fill='none' stroke='%235C1132' stroke-width='0.4' opacity='0.15'/%3E%3Ccircle cx='24' cy='24' r='3' fill='%23E91E63' opacity='0.08'/%3E%3C/svg%3E");
+  background-size: 48px 48px;
+}
+
+/* Page header wax-print overlay */
+.page-header .ankara-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+/* ========================================
    IMAGE PLACEHOLDERS
    ======================================== */
 
