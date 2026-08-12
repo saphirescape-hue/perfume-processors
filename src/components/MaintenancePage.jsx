@@ -216,6 +216,85 @@ export default function MaintenancePage() {
                   </a>
                 </div>
 
+                {/* Address & Map */}
+                <div className="mb-6 rounded-2xl overflow-hidden"
+                  style={{
+                    background: "rgba(233,30,99,0.03)",
+                    border: "1px solid rgba(233,30,99,0.08)",
+                  }}
+                >
+                  <div className="flex items-start gap-3 px-4 py-3">
+                    <div
+                      className="flex-shrink-0 inline-flex items-center justify-center w-9 h-9 rounded-lg mt-0.5 text-primary-light"
+                      style={{
+                        background: "rgba(233,30,99,0.06)",
+                        border: "1px solid rgba(233,30,99,0.1)",
+                      }}
+                    >
+                      <svg
+                        className="w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={1.5}
+                          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                        />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={1.5}
+                          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                        />
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-text-primary">Our Location</p>
+                      <p className="text-xs text-text-secondary leading-relaxed mt-0.5">
+                        Ghetawala Plot, Nr Railway bridge,<br />
+                        Jetpur, Gujarat 360370
+                      </p>
+                    </div>
+                  </div>
+                  <a
+                    href="https://maps.app.goo.gl/2ibkFM9KLsLBTxyZA"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block hover:opacity-90 transition-opacity"
+                  >
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3704.6!2d70.62!3d21.75!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDQ1JzAwLjAiTiA3MMKwMzcnMTIuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                      width="100%"
+                      height="160"
+                      style={{ border: 0 }}
+                      allowFullScreen=""
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="Perfume Processors Location"
+                      className="pointer-events-none"
+                    />
+                    <div className="bg-white/60 backdrop-blur-sm px-4 py-2 flex items-center gap-2 text-xs text-primary font-medium">
+                      <svg
+                        className="w-3.5 h-3.5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                        />
+                      </svg>
+                      Open in Google Maps
+                    </div>
+                  </a>
+                </div>
+
                 <div className="section-divider mb-6" />
 
                 {/* Success toast */}
