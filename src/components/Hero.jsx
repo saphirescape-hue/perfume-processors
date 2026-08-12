@@ -2,16 +2,21 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden pt-28 pb-20 px-6">
-      {/* Ambient background glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] opacity-20 pointer-events-none blur-3xl rounded-full"
-        style={{ background: "radial-gradient(circle, rgba(233,30,99,0.25) 0%, rgba(92,11,50,0.15) 50%, transparent 80%)" }} />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-24">
+      {/* Decorative radial accent */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-10 pointer-events-none">
+        <div
+          className="w-full h-full rounded-full"
+          style={{
+            background: "radial-gradient(circle, rgba(233,30,99,0.12) 0%, transparent 60%)",
+          }}
+        />
+      </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto w-full text-center">
+      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
         {/* Overline badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -33,7 +38,7 @@ export default function Hero() {
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: [0.23, 1, 0.32, 1] }}
+          transition={{ duration: 0.8, delay: 0.4, ease: [0.23, 1, 0.32, 1] }}
           className="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.08] tracking-tight mb-6"
         >
           <span className="text-text-primary">Perfume </span>
@@ -44,28 +49,29 @@ export default function Hero() {
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4, ease: [0.23, 1, 0.32, 1] }}
+          transition={{ duration: 0.8, delay: 0.6, ease: [0.23, 1, 0.32, 1] }}
           className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Three decades of innovation in textile manufacturing, creating high-quality African wax prints, Ankara, and sustainable fabrics.
+          Three decades of innovation in textile manufacturing, committed to
+          quality and sustainability for our clients.
         </motion.p>
 
         {/* CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5, ease: [0.23, 1, 0.32, 1] }}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
+          transition={{ duration: 0.8, delay: 0.8, ease: [0.23, 1, 0.32, 1] }}
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
-          <Link href="/gallery">
+          <Link href="/our-history">
             <button className="glow-button text-base px-8 py-4">
-              Explore Gallery
+              About Us
               <svg className="inline-block ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </button>
           </Link>
-          <Link href="/our-history">
+          <Link href="/contact">
             <button
               className="px-8 py-4 rounded-full text-base font-semibold text-primary transition-all duration-300 hover:bg-primary/5 hover:scale-105"
               style={{
@@ -73,56 +79,30 @@ export default function Hero() {
                 background: "rgba(255,255,255,0.6)",
               }}
             >
-              Our History
+              Contact Us
             </button>
           </Link>
         </motion.div>
-
-        {/* Hero Aesthetic Featured Image Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.6, ease: [0.23, 1, 0.32, 1] }}
-          className="relative max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-2xl"
-          style={{
-            border: "1px solid rgba(255, 255, 255, 0.8)",
-            boxShadow: "0 25px 50px -12px rgba(92, 11, 50, 0.15), 0 0 40px rgba(233, 30, 99, 0.08)",
-          }}
-        >
-          <div className="relative h-64 sm:h-80 md:h-[400px] w-full overflow-hidden group">
-            <Image
-              src="/gallery/gallery-11.jpg"
-              alt="Featured Gold Magnolia Fabric Design"
-              fill
-              className="object-cover transition-transform duration-700 group-hover:scale-105"
-              priority
-              sizes="(max-width: 1200px) 100vw, 1024px"
-            />
-            {/* Subtle Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-80" />
-
-            {/* Floating Glass Label Overlay */}
-            <div className="absolute bottom-6 left-6 right-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-left">
-              <div>
-                <span className="text-xs font-semibold uppercase tracking-widest text-pink-300">
-                  Featured Masterpiece
-                </span>
-                <h3 className="text-xl sm:text-2xl font-bold text-white mt-0.5">
-                  Gold Magnolia on Black
-                </h3>
-              </div>
-              <Link href="/gallery">
-                <span className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-medium text-white backdrop-blur-md bg-white/20 border border-white/30 hover:bg-white/30 transition-colors">
-                  View in Gallery
-                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </span>
-              </Link>
-            </div>
-          </div>
-        </motion.div>
       </div>
+
+      {/* Scroll indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1.5 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
+      >
+        <motion.div
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          className="flex flex-col items-center gap-2 text-text-muted"
+        >
+          <span className="text-xs tracking-widest uppercase">Scroll</span>
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }
