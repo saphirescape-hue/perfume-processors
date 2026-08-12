@@ -17,13 +17,6 @@ export default function InfrastructurePage() {
 
       <section className="relative z-10 py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          {/* Top image placeholder */}
-          <ScrollReveal>
-            <div className="image-placeholder h-80 mb-16 rounded-2xl">
-              <Image src="/factory-floor.jpg" alt="Perfume Processors Manufacturing Floor" fill className="object-cover" sizes="(max-width: 768px) 100vw, 1152px" priority />
-            </div>
-          </ScrollReveal>
-
           {/* Section 1: Quality & Precision */}
           <ScrollReveal>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
@@ -105,10 +98,7 @@ export default function InfrastructurePage() {
                 <Image src="/facility-exterior-2.jpg" alt="Factory Building & Power Infrastructure" fill className="object-cover" sizes="(max-width: 768px) 100vw, 384px" />
               </div>
               <div className="image-placeholder h-56 rounded-2xl">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <span>Eco-friendly Production</span>
+                <Image src="/eco-friendly.jpg" alt="Eco-friendly Renewable Energy Production" fill className="object-cover" sizes="(max-width: 768px) 100vw, 384px" />
               </div>
             </div>
           </ScrollReveal>
