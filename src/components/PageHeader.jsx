@@ -5,8 +5,6 @@ import { motion } from "framer-motion";
 export default function PageHeader({ title, subtitle }) {
   return (
     <div className="page-header pt-32 pb-20 px-6">
-      {/* Ankara wax-print texture overlay */}
-      <div className="ankara-overlay ankara-diamonds" />
       <div className="max-w-5xl mx-auto text-center relative z-10">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
