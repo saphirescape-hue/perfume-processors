@@ -2,10 +2,26 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-24">
+      {/* Hero textile background accent */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div className="relative w-[900px] h-[900px] opacity-[0.08]"
+          style={{ maskImage: "radial-gradient(ellipse 50% 50% at center, black 20%, transparent 70%)", WebkitMaskImage: "radial-gradient(ellipse 50% 50% at center, black 20%, transparent 70%)" }}>
+          <Image
+            src="/gallery/gallery-06.jpg"
+            alt=""
+            fill
+            className="object-cover"
+            sizes="900px"
+            priority
+          />
+        </div>
+      </div>
+
       {/* Decorative radial accent */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-10 pointer-events-none">
         <div
@@ -15,6 +31,7 @@ export default function Hero() {
           }}
         />
       </div>
+
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
         {/* Overline badge */}
