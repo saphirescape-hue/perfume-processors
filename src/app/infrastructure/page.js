@@ -33,7 +33,7 @@ export default function InfrastructurePage() {
                 </p>
               </div>
               <div className="image-placeholder h-full min-h-[280px] rounded-2xl">
-                <Image src="/factory-machinery.jpg" alt="Quality Control & Precision Manufacturing" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 576px" />
+                <Image src="/printing-machine.jpg" alt="Textile Printing Machine & Quality Control" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 576px" />
               </div>
             </div>
           </ScrollReveal>
@@ -52,7 +52,7 @@ export default function InfrastructurePage() {
           <ScrollReveal>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
               <div className="image-placeholder h-full min-h-[280px] rounded-2xl">
-                <Image src="/printing-machine.jpg" alt="Textile Printing Machine" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 576px" />
+                <Image src="/factory-machinery.jpg" alt="Manufacturing Machinery & Technical Support" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 576px" />
               </div>
               <div className="glass-card p-8 sm:p-10">
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl mb-5 text-primary-light"
