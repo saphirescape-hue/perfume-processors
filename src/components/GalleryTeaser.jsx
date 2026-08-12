@@ -2,13 +2,14 @@
 
 import ScrollReveal from "./ScrollReveal";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function GalleryTeaser() {
   const images = [
-    { label: "Printed Fabrics" },
-    { label: "Dyed Textiles" },
-    { label: "Raw Materials" },
-    { label: "Finished Goods" },
+    { src: "/gallery/gallery-06.jpg", label: "Ornate Floral Mandala" },
+    { src: "/gallery/gallery-11.jpg", label: "Gold Magnolia" },
+    { src: "/gallery/gallery-27.jpg", label: "Teal Spider Lily" },
+    { src: "/gallery/gallery-30.jpg", label: "Crimson Ankara" },
   ];
 
   return (
@@ -20,18 +21,25 @@ export default function GalleryTeaser() {
             <span className="gradient-text">Gallery</span>
           </h2>
           <p className="text-text-secondary text-lg max-w-2xl mx-auto">
-            Browse through our high-quality fabrics that are perfect for all your needs.
+            Browse through our premium African wax print, Ankara, and floral textile designs.
           </p>
         </ScrollReveal>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {images.map((img, i) => (
             <ScrollReveal key={img.label} delay={i * 0.1}>
-              <div className="image-placeholder aspect-[3/4] relative group cursor-pointer transition-all duration-300 hover:shadow-lg hover:border-primary-light/30">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <span className="text-sm font-medium text-text-muted">{img.label}</span>
+              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden group cursor-pointer transition-all duration-300 hover:shadow-lg">
+                <Image
+                  src={img.src}
+                  alt={img.label}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                />
+                {/* Hover overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <span className="text-white text-sm font-semibold">{img.label}</span>
+                </div>
               </div>
             </ScrollReveal>
           ))}

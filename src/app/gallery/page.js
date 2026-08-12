@@ -1,24 +1,45 @@
 import PageHeader from "@/components/PageHeader";
 import ScrollReveal from "@/components/ScrollReveal";
+import Image from "next/image";
 
 export const metadata = {
   title: "Gallery | Perfume Processors",
-  description: "Explore our advanced textile manufacturing capabilities focused on sustainability, quality, and innovation.",
+  description: "Explore our stunning collection of African wax print, Ankara, Kitenge, batik, and floral textile designs manufactured with precision and artistry.",
 };
 
 const galleryItems = [
-  { label: "Printed Cotton Fabrics" },
-  { label: "Dyed Polyester Textiles" },
-  { label: "Silk Blend Materials" },
-  { label: "Raw Cotton Bales" },
-  { label: "Finished Garment Fabric" },
-  { label: "Color Matching Lab" },
-  { label: "Weaving Process" },
-  { label: "Quality Testing" },
-  { label: "Sustainable Dyeing" },
-  { label: "Pattern Design" },
-  { label: "Fabric Rolls" },
-  { label: "Shipping & Logistics" },
+  { src: "/gallery/gallery-06.jpg", label: "Ornate Floral Mandala" },
+  { src: "/gallery/gallery-11.jpg", label: "Gold Magnolia on Black" },
+  { src: "/gallery/gallery-27.jpg", label: "Teal Spider Lily & Butterflies" },
+  { src: "/gallery/gallery-30.jpg", label: "Crimson Ankara Fan Motif" },
+  { src: "/gallery/gallery-17.jpg", label: "Midnight Copper Orchids" },
+  { src: "/gallery/gallery-12.jpg", label: "Coral Hibiscus on Cream" },
+  { src: "/gallery/gallery-01.jpg", label: "Blue Batik Starburst" },
+  { src: "/gallery/gallery-26.jpg", label: "Bronze Swirling Rings" },
+  { src: "/gallery/gallery-02.jpg", label: "Golden Peacock Print" },
+  { src: "/gallery/gallery-03.jpg", label: "Orange Greek Key Wax Print" },
+  { src: "/gallery/gallery-05.jpg", label: "Pink & White Elephants" },
+  { src: "/gallery/gallery-28.jpg", label: "Batik Lotus on Black" },
+  { src: "/gallery/gallery-29.jpg", label: "Purple Fan Ankara" },
+  { src: "/gallery/gallery-14.jpg", label: "Teal Coral Poppies" },
+  { src: "/gallery/gallery-15.jpg", label: "Pink Paisley Elegance" },
+  { src: "/gallery/gallery-32.jpg", label: "Blue & Red Floral Ankara" },
+  { src: "/gallery/gallery-07.jpg", label: "Purple Floral on Gold" },
+  { src: "/gallery/gallery-09.jpg", label: "Copper Orchid on Brown" },
+  { src: "/gallery/gallery-16.jpg", label: "Orange Paisley Garden" },
+  { src: "/gallery/gallery-19.jpg", label: "Kente Green Patchwork" },
+  { src: "/gallery/gallery-20.jpg", label: "Kente Orange & Turquoise" },
+  { src: "/gallery/gallery-21.jpg", label: "Abstract Teal & Copper Swirls" },
+  { src: "/gallery/gallery-04.jpg", label: "Orange Batik Starburst" },
+  { src: "/gallery/gallery-08.jpg", label: "Navy Retro Floral" },
+  { src: "/gallery/gallery-10.jpg", label: "Teal Dusty Rose Florals" },
+  { src: "/gallery/gallery-13.jpg", label: "Burgundy Sunflower Print" },
+  { src: "/gallery/gallery-23.jpg", label: "Blue & Gold Wave Dots" },
+  { src: "/gallery/gallery-31.jpg", label: "Teal Sunflower Medallions" },
+  { src: "/gallery/gallery-33.jpg", label: "Black Magenta Blossoms" },
+  { src: "/gallery/gallery-18.jpg", label: "Purple Lavender Waves" },
+  { src: "/gallery/gallery-24.jpg", label: "Abstract Pebble Motifs" },
+  { src: "/gallery/gallery-25.jpg", label: "Neon Pebble Pop Art" },
 ];
 
 export default function GalleryPage() {
@@ -26,27 +47,36 @@ export default function GalleryPage() {
     <>
       <PageHeader
         title="Gallery"
-        subtitle="A visual showcase of our high-quality fabrics, manufacturing processes, and facilities."
+        subtitle="A visual showcase of our premium African wax print, Ankara, Kitenge, batik, and floral textile designs."
       />
 
       <section className="relative z-10 py-20 px-6">
         <div className="max-w-7xl mx-auto">
           {/* Masonry-style grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {galleryItems.map((item, i) => {
-              // Varying heights for visual interest
-              const heights = ["h-56", "h-72", "h-64", "h-80", "h-56", "h-72", "h-64", "h-56", "h-80", "h-64", "h-72", "h-56"];
-              return (
-                <ScrollReveal key={item.label} delay={(i % 4) * 0.08}>
-                  <div className={`image-placeholder ${heights[i]} rounded-2xl group cursor-pointer transition-all duration-300 hover:shadow-lg hover:border-primary-light/20`}>
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                    <span className="text-sm font-medium">{item.label}</span>
+          <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+            {galleryItems.map((item, i) => (
+              <ScrollReveal key={item.src} delay={(i % 4) * 0.06}>
+                <div className="break-inside-avoid group cursor-pointer relative overflow-hidden rounded-2xl">
+                  <div className="relative w-full">
+                    <Image
+                      src={item.src}
+                      alt={item.label}
+                      width={400}
+                      height={500}
+                      className="w-full h-auto object-cover rounded-2xl transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                      {...(i < 8 ? { priority: true } : {})}
+                    />
                   </div>
-                </ScrollReveal>
-              );
-            })}
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl flex items-end p-4">
+                    <span className="text-white text-sm font-semibold tracking-wide">
+                      {item.label}
+                    </span>
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
           </div>
         </div>
       </section>
