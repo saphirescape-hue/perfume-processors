@@ -1,5 +1,6 @@
 import PageHeader from "@/components/PageHeader";
 import ScrollReveal from "@/components/ScrollReveal";
+import Image from "next/image";
 
 export const metadata = {
   title: "Infrastructure & Capabilities | Perfume Processors",
@@ -19,10 +20,7 @@ export default function InfrastructurePage() {
           {/* Top image placeholder */}
           <ScrollReveal>
             <div className="image-placeholder h-80 mb-16 rounded-2xl">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              <span>Manufacturing Infrastructure</span>
+              <Image src="/factory-floor.jpg" alt="Perfume Processors Manufacturing Floor" fill className="object-cover" sizes="(max-width: 768px) 100vw, 1152px" priority />
             </div>
           </ScrollReveal>
 
@@ -42,10 +40,7 @@ export default function InfrastructurePage() {
                 </p>
               </div>
               <div className="image-placeholder h-full min-h-[280px] rounded-2xl">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <span>Quality Control Lab</span>
+                <Image src="/factory-machinery.jpg" alt="Quality Control & Precision Manufacturing" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 576px" />
               </div>
             </div>
           </ScrollReveal>
